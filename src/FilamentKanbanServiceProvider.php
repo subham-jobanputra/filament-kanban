@@ -21,14 +21,7 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
 
     public function configurePackage(Package $package): void
     {
-        $package->name(static::$name)
-            ->hasAssets()
-            ->hasCommands($this->getCommands())
-            ->hasInstallCommand(function (InstallCommand $command) {
-                $command
-                    ->publishAssets()
-                    ->askToStarRepoOnGitHub('mokhosh/filament-kanban');
-            });
+        $package->name(static::$name);
 
         if (file_exists($package->basePath('/../resources/views'))) {
             $package->hasViews(static::$viewNamespace);
@@ -37,11 +30,6 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
 
     public function packageBooted(): void
     {
-        // Asset Registration
-        FilamentAsset::register(
-            $this->getAssets(),
-            $this->getAssetPackageName()
-        );
 
         // Handle Stubs
         if (app()->runningInConsole()) {
@@ -52,8 +40,7 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
             }
         }
 
-        // Testing
-        Testable::mixin(new TestsFilamentKanban());
+        
     }
 
     protected function getAssetPackageName(): ?string
