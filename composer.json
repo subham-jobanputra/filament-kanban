@@ -1,5 +1,5 @@
 {
-    "name": "mokhosh/filament-kanban",
+    "name": "subham-jobanputra/filament-kanban",
     "description": "Add kanban boards to your Filament pages",
     "keywords": [
         "mokhosh",
@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.0 | ^8.1",
         "filament/filament": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0",
         "illuminate/contracts": "^10.0|^11.0"
