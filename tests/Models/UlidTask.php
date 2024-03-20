@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Spatie\EloquentSortable\Sortable;
-use Spatie\EloquentSortable\SortableTrait;
+use SH\EloquentSortable\Sortable;
+use SH\EloquentSortable\SortableTrait;
 
 class UlidTask extends Model implements Sortable
 {

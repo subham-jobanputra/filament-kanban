@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Spatie\EloquentSortable\Sortable;
-use Spatie\EloquentSortable\SortableTrait;
+use SH\EloquentSortable\Sortable;
+use SH\EloquentSortable\SortableTrait;
 
 class Task extends Model implements Sortable
 {
